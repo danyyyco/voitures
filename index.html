@@ -1,12 +1,341 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cars-Site</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
 </head>
+
 <body>
-    <h1 class="">Blue</h1>
+
+    <!-- HEADER -->
+    <header class="flex justify-between items-center p-4 shadow-lg fixed top-0 left-0 right-0 w-full z-10 bg-white">
+        <!-- Logo -->
+        <div class="logo w-10">
+            <img src="assets/images/logo.png" alt="">
+        </div>
+        <!-- Navbar -->
+        <nav>
+            <ul class="flex gap-12 text-lg">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#cars">Voitures</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">À Propos</a></li>
+                <li><a href="reviews">Avis</a></li>
+            </ul>
+        </nav>
+        <!-- Icone utilisateur -->
+        <div class="user-icon bg-[#F45C36] text-white px-5 py-2 rounded-sm">
+            <i class="fas fa-user"></i>
+        </div>
+        <!-- Menu burger -->
+        <div class="menu-burger hidden">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+        <!-- HOME -->
+        <section id="home"
+            class="w-full min-h-screen relative bg-[url('/assets/images/bg-home.jpg')] bg-no-repeat bg-center bg-cover flex justify-center flex-col my-16">
+            <div class="home-text absolute top-10 left-10 mx-10">
+                <h1 class="text-white text-6xl font-bold leading-relaxed"><span class="text-[#F45C36]">Roulez
+                        L'Éxperience</span><br />Location de Voitures <br /> Simplifiée</h1>
+                <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam nemo praesentium
+                    ipsa facere non esse.</p>
+            </div>
+            <div class="home-form absolute top-96 left-10 mx-10 w-[850px]">
+                <form class="bg-gray-100 p-7 rounded-lg flex gap-10">
+                    <div class="form-col">
+                        <label>Emplacement</label> <br />
+                        <input type="search" placeholder="Où recherchez-vous?" class="bg-[#e2e2e2] p-1 rounded-lg">
+                    </div>
+                    <div class="form-col">
+                        <label>Date de début</label> <br />
+                        <input type="date" class="bg-[#e2e2e2] p-1 rounded-lg">
+                    </div>
+                    <div class="form-col">
+                        <label>Date de fin</label> <br />
+                        <input type="date" class="bg-[#e2e2e2] p-1 rounded-lg">
+                    </div>
+                    <div class="form-col">
+                        <input type="submit" value="Rechercher"
+                            class="bg-[#F45C36] text-white p-3 rounded-lg w-40 relative top-2">
+                    </div>
+                </form>
+            </div>
+        </section>
+        <!-- SERVICES -->
+        <section class="text-center my-44 mx-20">
+            <div class="en-tete">
+                <div class="text-[#F45C36]">Comment ça marche?</div>
+                <h1 class="text-6xl font-bold">Locations en 3 étapes seulement !</h1>
+            </div>
+            <div class="services flex mt-20 gap-20" id="services">
+                <div class="service relative p-7">
+                    <div class="corner-top-left"></div>
+                    <div class="corner-bottom-right"></div>
+                    <i class="fas fa-map-marker-alt text-4xl"></i>
+                    <h3 class="font-semibold text-xl">Choisir un emplacement</h3>
+                    <p class="text-sm">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam excepturi animi
+                        non unde quod
+                        corrupti?</p>
+                </div>
+                <div class="service relative p-7">
+                    <div class="corner-top-left"></div>
+                    <div class="corner-bottom-right"></div>
+                    <i class="fas fa-calendar-alt text-4xl"></i>
+                    <h3 class="font-semibold text-xl">Choisir une date</h3>
+                    <p class="text-sm">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam excepturi animi
+                        non unde quod
+                        corrupti?</p>
+                </div>
+                <div class="service relative p-7">
+                    <div class="corner-top-left"></div>
+                    <div class="corner-bottom-right"></div>
+                    <i class="fas fa-car text-4xl"></i>
+                    <h3 class="font-semibold text-xl">Réserver une voiture</h3>
+                    <p class="text-sm">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam excepturi animi
+                        non unde quod
+                        corrupti?</p>
+                </div>
+            </div>
+        </section>
+        <!-- VOITURES -->
+        <section class="text-center my-44 mx-20" id="cars">
+            <div class="en-tete">
+                <div class="text-[#F45C36]">Nos prestations</div>
+                <h1 class="text-6xl font-bold">Découvrez les meilleures offres !</h1>
+            </div>
+            <div class="voitures grid grid-cols-3 mt-20 gap-5 mx-12">
+                <div class="voiture p-7 border-1 border-gray-300 shadow-lg rounded-lg w-xs">
+                    <div class="photo">
+                        <img src="assets/images/car-01.jpg" alt="" class="rounded-lg">
+                    </div>
+                    <div class="description flex flex-col my-5 gap-3 text-lg">
+                        <span class="bg-[#F45C36] rounded-lg text-white w-12">2018</span>
+                        <span class="text-left">BMW</span>
+                        <div class="text-left text-[#F45C36] "><span class="font-semibold">150€</span> /mois</div>
+                    </div>
+                    <div class="cta bg-[#F45C36] text-white rounded-lg p-2 hover:bg-[#BD3816] cursor-pointer">
+                        <a href="#">Louer maintenant</a>
+                    </div>
+                </div>
+                <div class="voiture p-7 border-1 border-gray-300 shadow-lg rounded-lg w-xs">
+                    <div class="photo">
+                        <img src="assets/images/car-02.jpg" alt="" class="rounded-lg">
+                    </div>
+                    <div class="description flex flex-col my-5 gap-3 text-lg">
+                        <span class="bg-[#F45C36] rounded-lg text-white w-12">2018</span>
+                        <span class="text-left">Honda</span>
+                        <div class="text-left text-[#F45C36] "><span class="font-semibold">150€</span> /mois</div>
+                    </div>
+                    <div class="cta bg-[#F45C36] text-white rounded-lg p-2 hover:bg-[#BD3816] cursor-pointer">
+                        <a href="#">Louer maintenant</a>
+                    </div>
+                </div>
+                <div class="voiture p-7 border-1 border-gray-300 shadow-lg rounded-lg w-xs">
+                    <div class="photo">
+                        <img src="assets/images/car-03.jpg" alt="" class="rounded-lg">
+                    </div>
+                    <div class="description flex flex-col my-5 gap-3 text-lg">
+                        <span class="bg-[#F45C36] rounded-lg text-white w-12">2018</span>
+                        <span class="text-left">Yamaha</span>
+                        <div class="text-left text-[#F45C36] "><span class="font-semibold">150€</span> /mois</div>
+                    </div>
+                    <div class="cta bg-[#F45C36] text-white rounded-lg p-2 hover:bg-[#BD3816] cursor-pointer">
+                        <a href="#">Louer maintenant</a>
+                    </div>
+                </div>
+                <div class="voiture p-7 border-1 border-gray-300 shadow-lg rounded-lg w-xs">
+                    <div class="photo">
+                        <img src="assets/images/car-04.jpg" alt="" class="rounded-lg">
+                    </div>
+                    <div class="description flex flex-col my-5 gap-3 text-lg">
+                        <span class="bg-[#F45C36] rounded-lg text-white w-12">2018</span>
+                        <span class="text-left">Toyota</span>
+                        <div class="text-left text-[#F45C36] "><span class="font-semibold">150€</span> /mois</div>
+                    </div>
+                    <div class="cta bg-[#F45C36] text-white rounded-lg p-2 hover:bg-[#BD3816] cursor-pointer">
+                        <a href="#">Louer maintenant</a>
+                    </div>
+                </div>
+                <div class="voiture p-7 border-1 border-gray-300 shadow-lg rounded-lg w-xs">
+                    <div class="photo">
+                        <img src="assets/images/car-05.jpg" alt="" class="rounded-lg">
+                    </div>
+                    <div class="description flex flex-col my-5 gap-3 text-lg">
+                        <span class="bg-[#F45C36] rounded-lg text-white w-12">2018</span>
+                        <span class="text-left">Toyota</span>
+                        <div class="text-left text-[#F45C36] "><span class="font-semibold">150€</span> /mois</div>
+                    </div>
+                    <div class="cta bg-[#F45C36] text-white rounded-lg p-2 hover:bg-[#BD3816] cursor-pointer">
+                        <a href="#">Louer maintenant</a>
+                    </div>
+                </div>
+                <div class="voiture p-7 border-1 border-gray-300 shadow-lg rounded-lg w-xs">
+                    <div class="photo">
+                        <img src="assets/images/car-06.jpg" alt="" class="rounded-lg">
+                    </div>
+                    <div class="description flex flex-col my-5 gap-3 text-lg">
+                        <span class="bg-[#F45C36] rounded-lg text-white w-12">2018</span>
+                        <span class="text-left">BMW</span>
+                        <div class="text-left text-[#F45C36] "><span class="font-semibold">150€</span> /mois</div>
+                    </div>
+                    <div class="cta bg-[#F45C36] text-white rounded-lg p-2 hover:bg-[#BD3816] cursor-pointer">
+                        <a href="#">Louer maintenant</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="my-44 mx-20">
+            <div class="en-tete text-center">
+                <div class="text-[#F45C36]">Qui nous somme ?</div>
+                <h1 class="text-6xl font-bold">Notre histoire !</h1>
+            </div>
+            <div class="row flex mt-16 ml-16 gap-8">
+                <div class="col">
+                    <img src="assets/images/about.png" alt="" class="w-lg">
+                </div>
+                <div class="col">
+                    <h5 class="text-[#F45C36] font-bold uppercase">À propos de nous</h5><br>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam <br> soluta sint hic earum
+                        incidunt
+                        asperiores repellat dolore odit <br> harum? Laboriosam.</p><br>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Quisquam optio, accusantium,
+                        impedit
+                        odio deserunt ex <br> perspiciatis labore atque reiciendis doloribus corporis, ipsum <br> amet
+                        ipsam!
+                        Voluptatibus?</p>
+                    <div
+                        class="cta bg-[#F45C36] text-white rounded-lg p-2 hover:bg-[#BD3816] cursor-pointer mt-5 text-center">
+                        <a href="#">En savoir plus</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Avis -->
+        <section class="text-center my-44 mx-20" id="cars">
+            <div class="en-tete">
+                <div class="text-[#F45C36]">Votre avis compte !</div>
+                <h1 class="text-6xl font-bold">Ils nous ont fait confiance</h1>
+            </div>
+            <div class="row grid grid-cols-3 mt-20 gap-5 mx-12">
+                <div
+                    class="col p-7 border-b-3 border-1 border-gray-300 border-b-red-500 shadow-lg rounded-lg w-xs hover:bg-[#e2e2e2]">
+                    <div class="photo">
+                        <img src="assets/images/review-01.jpg" alt="" class="clip-circle">
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="details flex flex-col my-5 gap-3 text-lg">
+                        <h3 class="font-bold">Thomas Does</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis quidem sint pariatur
+                            impedit quod nostrum.</p>
+                    </div>
+                </div>
+                <div
+                    class="col p-7 border-b-3 border-1 border-gray-300 border-b-red-500 shadow-lg rounded-lg w-xs hover:bg-[#e2e2e2]">
+                    <div class="photo">
+                        <img src="assets/images/review-02.jpg" alt="" class="clip-circle mt-5">
+                    </div>
+                    <div class="stars mt-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="details flex flex-col my-5 gap-3 text-lg">
+                        <h3 class="font-bold">Luis Chui</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis quidem sint pariatur
+                            impedit quod nostrum.</p>
+                    </div>
+                </div>
+                <div
+                    class="col p-7 border-b-3 border-1 border-gray-300 border-b-red-500 shadow-lg rounded-lg w-xs hover:bg-[#e2e2e2]">
+                    <div class="photo">
+                        <img src="assets/images/review-03.jpg" alt="" class="clip-circle">
+                    </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="details flex flex-col my-5 gap-3 text-lg">
+                        <h3 class="font-bold">Pierre Corentin</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis quidem sint pariatur
+                            impedit quod nostrum.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-gradient-to-tr from-[#BD3816] to-[#F45C36] text-center p-12" id="newsletter">
+            <h1 class="text-white font-bold text-2xl">Inscrivez vous à la newsletter</h1>
+            <form class="bg-white p-3 rounded-lg w-2/7 mx-auto flex mt-5">
+                <input type="email" placeholder="Indiquez votre e-mail">
+                <input type="submit" type="button"
+                    class="bg-[#F45C36] hover:bg-[#BD3816] cursor-pointer text-white p-2 rounded-lg w-44"
+                    value="S'inscrire"></input>
+            </form>
+        </section>
+
+        <footer class="bg-black p-10  flex justify-between">
+            <div class="footer-col">
+                <img src="assets/images/logo.png" alt="" class="w-15">
+                <div class="rs text-white">
+                    <i class="fab  fa-facebook  p-2 rounded-full bg-[#F45C36] hover:bg-[#BD3816] cursor-pointer"></i>
+                    <i class="fab  fa-instagram  p-2 rounded-full bg-[#F45C36] hover:bg-[#BD3816] cursor-pointer"></i>
+                    <i class="fab  fa-twitter  p-2 rounded-full bg-[#F45C36] hover:bg-[#BD3816] cursor-pointer"></i>
+                    <i class="fab  fa-youtube  p-2 rounded-full bg-[#F45C36] hover:bg-[#BD3816] cursor-pointer"></i>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3 class="text-white font-bold text-2xl">Informations</h3>
+                <div class="liens text-md mt-3">
+                    <p><a href="#" class="text-[#F45C36] hover:text-[#BD3816] cursor-pointer">Conditions de vente</a></p>
+                    <p><a href="#"  class="text-[#F45C36] hover:text-[#BD3816] cursor-pointer">Mentions légales</a></p>
+                    <p><a href="#"  class="text-[#F45C36] hover:text-[#BD3816] cursor-pointer">Support</a></p>
+                    <p><a href="#"  class="text-[#F45C36] hover:text-[#BD3816] cursor-pointer">Nous contacter</a></p>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3 class="text-white font-bold text-2xl">Nos locaux</h3>
+                <div class="liens text-md mt-3">
+                    <p><a href="#" class="text-[#F45C36] hover:text-[#BD3816] cursor-pointer">France</a></p>
+                    <p><a href="#"  class="text-[#F45C36] hover:text-[#BD3816] cursor-pointer">Algérie</a></p>
+                    <p><a href="#"  class="text-[#F45C36] hover:text-[#BD3816] cursor-pointer">Espagne</a></p>
+                    <p><a href="#"  class="text-[#F45C36] hover:text-[#BD3816] cursor-pointer">Italie</a></p>
+                    <p><a href="#"  class="text-[#F45C36] hover:text-[#BD3816] cursor-pointer">Canada</a></p>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3 class="text-white font-bold text-2xl">Payements</h3>
+                <div class="mp text-md mt-3 flex w-10">
+                    <img src="assets/images/pay-01.png" alt="">
+                    <img src="assets/images/pay-02.png" alt="">
+                    <img src="assets/images/pay-03.png" alt="">
+                    <img src="assets/images/pay-04.png" alt="">
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
 </body>
+
 </html>
